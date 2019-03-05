@@ -12,9 +12,11 @@ client.on('message', message => {
   	}
 });
 
- client.on('message', message => {
-    if (message.content === 'Hello') {
-    	message.reply('Fuck off');
+Client.on('message' , (message)=>{
+    if(!message.content.startsWith(prefix)) return;
+
+    if(message.content.startsWith(prefix + "hello")){
+        message.channel.send("Hello.");
   	}
 });
 
