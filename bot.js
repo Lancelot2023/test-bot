@@ -12,13 +12,5 @@ client.on('message', message => {
   	}
 });
 
-Client.on('message' , (message)=>{
-    if(!message.content.startsWith(prefix)) return;
-
-    if(message.content.startsWith(prefix + "hello")){
-        message.channel.send("Hello.");
-  	}
-});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
